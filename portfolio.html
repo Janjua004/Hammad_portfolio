@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hammad | Software Engineer & Researcher</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%234f46e5'/><stop offset='50%25' style='stop-color:%238b5cf6'/><stop offset='100%25' style='stop-color:%2306b6d4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23grad)'/><text x='50' y='65' font-family='Arial,sans-serif' font-size='40' font-weight='bold' fill='white' text-anchor='middle'>MH</text></svg>">
+    <meta name="description" content="Full Stack Developer and Research Student with 2+ years of development experience and 4+ years of academic research. Specializing in 3D web, AI integration, and enterprise applications.">
+    <meta name="keywords" content="Muhammad Hammad, Software Engineer, Full Stack Developer, 3D Web, AI, Researcher, Pakistan">
+    <meta name="author" content="Muhammad Hammad">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Muhammad Hammad | Software Engineer & Researcher">
+    <meta property="og:description" content="Full Stack Developer crafting intelligent solutions. 2+ years of development expertise with 4+ years of academic research.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="hammad1.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#4f46e5', // Indigo 600
+                            dark: '#818cf8',  // Indigo 400
+                            accent: '#06b6d4', // Cyan 500
+                        }
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'blob': 'blob 7s infinite',
+                        'spin-slow': 'spin 5s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Styles */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Simple CSS Grid Background */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        }
+        .dark .bg-grid {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+
+        /* Typewriter Effect */
+        .typewriter-text {
+            border-right: 2px solid #4f46e5;
+            padding-right: 4px;
+            animation: blink-caret 0.7s step-end infinite;
+        }
+        .dark .typewriter-text {
+            border-right-color: #818cf8;
+        }
+        @keyframes blink-caret {
+            0%, 100% { border-color: #4f46e5; }
+            50% { border-color: transparent; }
+        }
+        .dark .typewriter-text {
+            animation: blink-caret-dark 0.7s step-end infinite;
+        }
+        @keyframes blink-caret-dark {
+            0%, 100% { border-color: #818cf8; }
+            50% { border-color: transparent; }
+        }
+
+        /* Logo Animations */
+        @keyframes logo-morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        }
+        @keyframes logo-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes logo-ring-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.15); opacity: 0; }
+        }
+        .logo-animated {
+            animation: logo-morph 8s ease-in-out infinite, logo-gradient 4s ease infinite;
+            background-size: 200% 200%;
+        }
+        .logo-ring {
+            animation: logo-ring-pulse 2s ease-in-out infinite;
+        }
+
+        /* --- PROFESSIONAL LIQUID GLASS --- */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: saturate(180%) blur(12px);
+            -webkit-backdrop-filter: saturate(180%) blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .dark .liquid-glass {
+            background: rgba(17, 25, 40, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover Lift Effect */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #4f46e5, #06b6d4);
+        }
+        .dark .text-gradient {
+            background-image: linear-gradient(to right, #818cf8, #2dd4bf);
+        }
+
+        /* ========== PROFESSIONAL TIMELINE ========== */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Main vertical line */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, 
+                transparent,
+                #4f46e5 10%,
+                #06b6d4 50%,
+                #4f46e5 90%,
+                transparent
+            );
+            transform: translateX(-50%);
+        }
+        .dark .timeline-line {
+            background: linear-gradient(to bottom, 
+                transparent,
+                #818cf8 10%,
+                #2dd4bf 50%,
+                #818cf8 90%,
+                transparent
+            );
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+        }
+        
+        /* Timeline item */
+        .timeline-item {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: calc(50% + 40px);
+            margin-bottom: 50px;
+        }
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: calc(50% + 40px);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+        }
+        
+        /* Timeline dot */
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 24px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            border: 3px solid #fff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .timeline-dot {
+            border-color: #0f1117;
+            box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.2);
+        }
+        .timeline-item:hover .timeline-dot {
+            transform: translateX(-50%) scale(1.3);
+            box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+        
+        /* Timeline content card */
+        .timeline-content {
+            position: relative;
+            padding: 28px 32px;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(16px);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.6);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 400px;
+        }
+        .dark .timeline-content {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+        }
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(79, 70, 229, 0.15);
+            border-color: rgba(79, 70, 229, 0.3);
+        }
+        .dark .timeline-item:hover .timeline-content {
+            box-shadow: 0 12px 40px rgba(129, 140, 248, 0.15);
+            border-color: rgba(129, 140, 248, 0.3);
+        }
+        
+        /* Arrow pointer */
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            width: 12px;
+            height: 12px;
+            background: inherit;
+            border: inherit;
+            border-right: none;
+            border-bottom: none;
+            transform: rotate(135deg);
+            right: -7px;
+        }
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -7px;
+            right: auto;
+            transform: rotate(-45deg);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -7px;
+                right: auto;
+                transform: rotate(-45deg);
+            }
+        }
+        
+        /* Year badge */
+        .timeline-year {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: monospace;
+            letter-spacing: 0.05em;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .timeline-year.current {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.15));
+            color: #059669;
+        }
+        .dark .timeline-year.current {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+            color: #34d399;
+        }
+        .timeline-year.past {
+            background: rgba(99, 102, 241, 0.1);
+            color: #4f46e5;
+        }
+        .dark .timeline-year.past {
+            background: rgba(129, 140, 248, 0.15);
+            color: #a5b4fc;
+        }
+        
+        /* Title styling */
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        .dark .timeline-title {
+            color: #f1f5f9;
+        }
+        
+        /* Company/org styling */
+        .timeline-company {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #4f46e5;
+            margin-bottom: 12px;
+        }
+        .dark .timeline-company {
+            color: #818cf8;
+        }
+        
+        /* Description */
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        .dark .timeline-desc {
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 dark:bg-[#0f1117] dark:text-slate-200 transition-colors duration-300 font-sans relative overflow-x-hidden bg-grid">
+
+    <!-- Animated Background Blobs (Fixed) -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 opacity-40 dark:opacity-20">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-300 dark:bg-brand-dark rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan-300 dark:bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-300 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="liquid-glass border-b border-white/20 dark:border-white/5">
+            <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-xl font-bold tracking-tight flex items-center gap-3 group">
+                    <!-- Animated Morphing Logo -->
+                    <div class="relative w-11 h-11 flex items-center justify-center">
+                        <!-- Pulsing Ring -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-brand-light to-brand-accent rounded-full logo-ring"></div>
+                        <!-- Morphing Background -->
+                        <div class="absolute inset-0.5 bg-gradient-to-br from-brand-light via-purple-500 to-brand-accent logo-animated shadow-lg"></div>
+                        <!-- Inner Glow -->
+                        <div class="absolute inset-1 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+                        <!-- Text -->
+                        <span class="relative z-10 text-white font-bold text-sm tracking-tight drop-shadow-md">MH</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-semibold leading-tight group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">Muhammad Hammad</span>
+                        <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium tracking-wider">SOFTWARE ENGINEER</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                    <a href="#home" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Home</a>
+                    <a href="#about" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">About</a>
+                    <a href="#experience" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Experience</a>
+                    <a href="#skills" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Projects</a>
+                    
+                    <div class="flex items-center gap-4 pl-4 border-l border-gray-200 dark:border-gray-700">
+                        <!-- Theme Toggle -->
+                        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-slate-500 dark:text-slate-400">
+                            <i class="fas fa-moon dark:hidden"></i>
+                            <i class="fas fa-sun hidden dark:block text-amber-300"></i>
+                        </button>
+
+                        <a href="#contact" class="px-5 py-2.5 rounded-full bg-slate-900 text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wide hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                            HIRE ME
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700 dark:text-slate-200">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden liquid-glass border-t border-gray-200 dark:border-gray-800 absolute w-full">
+            <div class="flex flex-col p-6 space-y-6">
+                <a href="#home" class="mobile-link text-lg font-medium hover:text-brand-light dark:hover:text-brand-dark">Home</a>
+                <a href="#about" class="mobile-link text-lg font-medium hover:text-brand-light dark:hover:text-brand-dark">About</a>
+                <a href="#experience" class="mobile-link text-lg font-medium hover:text-brand-light dark:hover:text-brand-dark">Experience</a>
+                <a href="#skills" class="mobile-link text-lg font-medium hover:text-brand-light dark:hover:text-brand-dark">Skills</a>
+                <a href="#projects" class="mobile-link text-lg font-medium hover:text-brand-light dark:hover:text-brand-dark">Projects</a>
+                <a href="#contact" class="mobile-link text-lg font-medium text-brand-light dark:text-brand-dark">Get In Touch</a>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <span class="text-sm font-medium">Appearance</span>
+                    <button id="mobile-theme-toggle" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-amber-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative z-10">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Side: Text -->
+            <div class="space-y-8 order-2 md:order-1 reveal active">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-brand-light dark:text-brand-dark text-xs font-mono font-medium tracking-wide">
+                    <span class="w-2 h-2 rounded-full bg-brand-light dark:bg-brand-dark animate-pulse"></span>
+                    AVAILABLE FOR PROJECTS
+                </div>
+                
+                <div class="space-y-4">
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-slate-900 dark:text-white">
+                        Muhammad <br>
+                        <span class="text-gradient">Hammad</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-light">
+                        <span id="typewriter" class="typewriter-text font-medium text-slate-800 dark:text-slate-200"></span>
+                    </h2>
+                </div>
+
+                <p class="text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed text-lg">
+                    Full Stack Developer and Research Student crafting intelligent solutions. Merging 2 years of development expertise with 4 years of academic research.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6 pt-2">
+                    <a href="#projects" class="px-8 py-4 rounded-full bg-brand-light hover:bg-indigo-700 dark:bg-brand-dark dark:hover:bg-indigo-500 text-white font-semibold shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-1">
+                        View Projects
+                    </a>
+                    <div class="flex items-center gap-4">
+                        <a href="https://github.com/Janjua004" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-white/10 text-slate-600 dark:text-white hover:text-brand-light dark:hover:text-brand-dark hover:scale-110 transition-all shadow-sm">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-hammad-972393240/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-white/10 text-slate-600 dark:text-white hover:text-brand-light dark:hover:text-brand-dark hover:scale-110 transition-all shadow-sm">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hammadjanjua004/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-white/10 text-slate-600 dark:text-white hover:text-brand-light dark:hover:text-brand-dark hover:scale-110 transition-all shadow-sm">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Photo Frame - Hexagonal Design -->
+            <div class="order-1 md:order-2 flex justify-center relative reveal">
+                <!-- Animated Orbiting Rings -->
+                <div class="absolute w-64 h-64 md:w-[450px] md:h-[450px]">
+                    <div class="absolute inset-0 rounded-full border-2 border-dashed border-brand-light/30 dark:border-brand-dark/30 animate-spin-slow"></div>
+                    <div class="absolute inset-4 rounded-full border border-cyan-400/20 animate-spin-slow" style="animation-direction: reverse; animation-duration: 8s;"></div>
+                    <div class="absolute inset-8 rounded-full border border-purple-400/20 animate-spin-slow" style="animation-duration: 12s;"></div>
+                </div>
+                
+                <!-- Floating Tech Icons -->
+                <div class="absolute w-64 h-64 md:w-[450px] md:h-[450px] animate-spin-slow" style="animation-duration: 20s;">
+                    <!-- Top -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-react text-cyan-400 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Bottom -->
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-python text-blue-500 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Left -->
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-node-js text-green-500 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Right -->
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fas fa-cube text-indigo-500 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Top Left -->
+                    <div class="absolute top-[15%] left-[15%] -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-js text-yellow-400 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Top Right -->
+                    <div class="absolute top-[15%] right-[15%] translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-html5 text-orange-500 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Bottom Left -->
+                    <div class="absolute bottom-[15%] left-[15%] -translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-css3-alt text-blue-400 text-sm md:text-lg"></i>
+                    </div>
+                    <!-- Bottom Right -->
+                    <div class="absolute bottom-[15%] right-[15%] translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                        <i class="fab fa-git-alt text-red-500 text-sm md:text-lg"></i>
+                    </div>
+                </div>
+                
+                <!-- Main Profile Container -->
+                <div class="relative group">
+                    <!-- Glowing Background -->
+                    <div class="absolute -inset-6 bg-gradient-to-r from-brand-light via-brand-accent to-purple-500 rounded-full opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-500 animate-pulse"></div>
+                    
+                    <!-- Circular Frame with Border -->
+                    <div class="relative w-52 h-52 md:w-96 md:h-96 rounded-full p-2 bg-gradient-to-br from-brand-light via-brand-accent to-purple-500 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                        <!-- Inner White Ring -->
+                        <div class="w-full h-full rounded-full p-1.5 bg-white dark:bg-slate-900">
+                            <!-- Image Container -->
+                            <div class="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                                <img src="hammad1.png" alt="Muhammad Hammad - Software Engineer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <!-- Fallback Avatar -->
+                                <div class="hidden w-full h-full items-center justify-center bg-gradient-to-br from-brand-light to-brand-accent" style="display: none;">
+                                    <span class="text-8xl text-white font-bold">MH</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Status Badge - Bottom -->
+                    <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-white dark:bg-slate-800 rounded-full shadow-xl border border-gray-100 dark:border-gray-700">
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex h-3 w-3">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                            </span>
+                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200">Available for Hire</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Badge - Top Right -->
+                    <div class="absolute -top-2 -right-2 px-4 py-2 bg-gradient-to-r from-brand-light to-brand-accent rounded-full shadow-lg">
+                        <span class="text-sm font-bold text-white">2+ Years Exp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow text-slate-400 hover:text-brand-light dark:hover:text-brand-dark transition-colors">
+            <i class="fas fa-chevron-down text-xl"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="font-mono text-xs font-semibold text-brand-light dark:text-brand-dark tracking-widest uppercase">My Profile</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">About Me</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-stretch gap-8 max-w-6xl mx-auto">
+                <!-- About Text -->
+                <div class="w-full md:w-7/12 liquid-glass p-8 md:p-10 rounded-2xl text-slate-600 dark:text-slate-300 leading-relaxed text-lg reveal">
+                    <p class="mb-6">
+                        I am a <strong class="text-slate-800 dark:text-white">Software Engineering Student</strong> with a passion for building complex systems and exploring new technological frontiers.
+                    </p>
+                    <p class="mb-6">
+                        With <strong class="text-brand-light dark:text-brand-dark">2 years of hands-on development experience</strong> in building 3D webs and enterprise applications, and <strong class="text-brand-light dark:text-brand-dark">4 years of rigorous research experience</strong>, I bridge the gap between theoretical concepts and practical, scalable solutions.
+                    </p>
+                    <p class="mb-6">
+                        I specialize in creating AI-powered tools, management systems, and immersive web experiences.
+                    </p>
+                </div>
+                
+                <!-- Stats Grid -->
+                <div class="w-full md:w-5/12 grid grid-cols-2 gap-4">
+                    <div class="liquid-glass p-6 rounded-2xl flex flex-col justify-center items-center text-center hover-lift reveal">
+                        <span class="text-4xl font-bold text-gradient mb-1">2+</span>
+                        <span class="text-sm text-slate-500 font-medium">Years Dev Exp</span>
+                    </div>
+                    <div class="liquid-glass p-6 rounded-2xl flex flex-col justify-center items-center text-center hover-lift reveal">
+                        <span class="text-4xl font-bold text-gradient mb-1">4+</span>
+                        <span class="text-sm text-slate-500 font-medium">Years Research</span>
+                    </div>
+                    <div class="liquid-glass p-6 rounded-2xl flex flex-col justify-center items-center text-center hover-lift reveal">
+                        <span class="text-4xl font-bold text-gradient mb-1">5+</span>
+                        <span class="text-sm text-slate-500 font-medium">Major Projects</span>
+                    </div>
+                    <div class="liquid-glass p-6 rounded-2xl flex flex-col justify-center items-center text-center hover-lift reveal">
+                        <span class="text-4xl font-bold text-gradient mb-1">3D</span>
+                        <span class="text-sm text-slate-500 font-medium">Web Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section - Professional Timeline -->
+    <section id="experience" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="font-mono text-xs font-semibold text-brand-light dark:text-brand-dark tracking-widest uppercase">My Journey</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Experience & Education</h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-4 max-w-lg mx-auto">A timeline of my professional growth and academic achievements</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Item 1: Current Role -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year current">
+                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                            Present
+                        </span>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">Amanah Capitals</p>
+                        <p class="timeline-desc">Building financial software solutions with focus on scalability and performance for enterprise clients.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Freelance -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year past">2+ Years</span>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">Freelance</p>
+                        <p class="timeline-desc">Delivered web applications including attendance systems, legal management tools, and immersive 3D experiences.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Researcher -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year past">4+ Years</span>
+                        <h3 class="timeline-title">Research Student</h3>
+                        <p class="timeline-company">Academic Research</p>
+                        <p class="timeline-desc">Focused on software engineering methodologies, AI tools integration, and automated documentation systems.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Education -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year current">
+                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                            Ongoing
+                        </span>
+                        <h3 class="timeline-title">BS Software Engineering</h3>
+                        <p class="timeline-company">University</p>
+                        <p class="timeline-desc">Pursuing degree with focus on advanced algorithms, system architecture, and modern development practices.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="font-mono text-xs font-semibold text-brand-light dark:text-brand-dark tracking-widest uppercase">Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Tools & Technologies</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+                <!-- Skill Cards -->
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-orange-100 dark:bg-orange-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">HTML/CSS</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-yellow-100 dark:bg-yellow-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-js text-2xl text-yellow-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">JavaScript</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-cyan-100 dark:bg-cyan-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-react text-2xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-semibold text-sm">React</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-green-100 dark:bg-green-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-node-js text-2xl text-green-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">Node.js</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-blue-100 dark:bg-blue-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-python text-2xl text-blue-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">Python</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-indigo-100 dark:bg-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cube text-2xl text-indigo-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">Three.js</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-purple-100 dark:bg-purple-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-brain text-2xl text-purple-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">AI/ML</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-emerald-100 dark:bg-emerald-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-database text-2xl text-emerald-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">MongoDB</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-sky-100 dark:bg-sky-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-wind text-2xl text-sky-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">Tailwind</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-github text-2xl text-slate-700 dark:text-slate-300"></i>
+                    </div>
+                    <p class="font-semibold text-sm">GitHub</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-red-100 dark:bg-red-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-git-alt text-2xl text-red-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">Git</p>
+                </div>
+
+                <div class="group liquid-glass p-5 rounded-2xl text-center hover-lift cursor-default reveal">
+                    <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-blue-100 dark:bg-blue-900/20 rounded-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-docker text-2xl text-blue-500"></i>
+                    </div>
+                    <p class="font-semibold text-sm">Docker</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="font-mono text-xs font-semibold text-brand-light dark:text-brand-dark tracking-widest uppercase">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Work</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Chotu AI -->
+                <div class="liquid-glass rounded-2xl overflow-hidden hover-lift group reveal">
+                    <div class="h-56 overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="Chotu AI - AI Terminal Assistant" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <!-- Floating Icon Badge -->
+                        <div class="absolute top-4 left-4 z-20 w-10 h-10 rounded-xl bg-white/90 dark:bg-black/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                            <i class="fas fa-robot text-brand-light dark:text-brand-dark"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">Chotu AI</h3>
+                            <div class="flex space-x-3 text-slate-400">
+                                <a href="#" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">An AI-powered terminal assistant that enhances command-line productivity with natural language processing.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold text-brand-light dark:text-brand-dark bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Python</span>
+                            <span class="text-xs font-semibold text-brand-light dark:text-brand-dark bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Digital Dairy -->
+                <div class="liquid-glass rounded-2xl overflow-hidden hover-lift group reveal">
+                    <div class="h-56 overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop" alt="Digital Dairy - Legal Case Management" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <!-- Floating Icon Badge -->
+                        <div class="absolute top-4 left-4 z-20 w-10 h-10 rounded-xl bg-white/90 dark:bg-black/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                            <i class="fas fa-gavel text-brand-light dark:text-brand-dark"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">Digital Dairy</h3>
+                            <div class="flex space-x-3 text-slate-400">
+                                <a href="#" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">A case management system for advocates to store and manage legal case data and client history securely.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold text-brand-light dark:text-brand-dark bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Database</span>
+                            <span class="text-xs font-semibold text-brand-light dark:text-brand-dark bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: DEVMENTOR -->
+                <div class="liquid-glass rounded-2xl overflow-hidden hover-lift group reveal">
+                    <div class="h-56 overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="DEVMENTOR - SRS Documentation Generator" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <!-- Floating Icon Badge -->
+                        <div class="absolute top-4 left-4 z-20 w-10 h-10 rounded-xl bg-white/90 dark:bg-black/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                            <i class="fas fa-file-code text-brand-light dark:text-brand-dark"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">DEVMENTOR</h3>
+                            <div class="flex space-x-3 text-slate-400">
+                                <a href="#" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">An automated tool to generate Software Requirements Specifications (SRS) and technical documentation.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold text-brand-light dark:text-brand-dark bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Automation</span>
+                            <span class="text-xs font-semibold text-brand-light dark:text-brand-dark bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Tooling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <span class="font-mono text-xs font-semibold text-brand-light dark:text-brand-dark tracking-widest uppercase">Contact</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-8">Let's Work Together</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed text-lg">
+                        Based in Lahore Gulberg III. Open to new opportunities in development and research.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-5 group cursor-pointer">
+                            <div class="w-12 h-12 liquid-glass rounded-full flex items-center justify-center text-brand-light dark:text-brand-dark group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">aljanjua74@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-5 group cursor-pointer">
+                            <div class="w-12 h-12 liquid-glass rounded-full flex items-center justify-center text-brand-light dark:text-brand-dark group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">+92 (325) 9964045</span>
+                        </div>
+                        <div class="flex items-center space-x-5 group cursor-pointer">
+                            <div class="w-12 h-12 liquid-glass rounded-full flex items-center justify-center text-brand-light dark:text-brand-dark group-hover:scale-110 transition-transform">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">Lahore Gulberg III, Pakistan</span>
+                        </div>
+                    </div>
+
+                    <!-- Footer Socials -->
+                    <div class="flex space-x-6 mt-12">
+                        <a href="https://github.com/Janjua004" target="_blank" class="text-slate-400 hover:text-brand-light dark:hover:text-brand-dark transition-colors text-2xl"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-hammad-972393240/" target="_blank" class="text-slate-400 hover:text-brand-light dark:hover:text-brand-dark transition-colors text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/hammadjanjua004/" target="_blank" class="text-slate-400 hover:text-brand-light dark:hover:text-brand-dark transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="liquid-glass p-10 rounded-3xl reveal">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thanks for the message! (This is a demo)');">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Name</label>
+                            <input type="text" class="w-full px-5 py-3 rounded-xl bg-white/50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark focus:ring-1 focus:ring-brand-light dark:focus:ring-brand-dark transition-all backdrop-blur-sm" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                            <input type="email" class="w-full px-5 py-3 rounded-xl bg-white/50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark focus:ring-1 focus:ring-brand-light dark:focus:ring-brand-dark transition-all backdrop-blur-sm" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-5 py-3 rounded-xl bg-white/50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark focus:ring-1 focus:ring-brand-light dark:focus:ring-brand-dark transition-all backdrop-blur-sm" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-brand-light hover:bg-indigo-700 dark:bg-brand-dark dark:hover:bg-indigo-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-indigo-500/25 transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-800 mt-24 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2025 Muhammad Hammad. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-brand-light dark:hover:text-brand-dark">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button with Liquid Fill -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 bg-white dark:bg-slate-900 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg translate-y-24 opacity-0 transition-all duration-500 z-50 overflow-hidden flex items-center justify-center group hover:shadow-xl hover:-translate-y-1">
+        <!-- Liquid Fill Element: Large rounded square rotating -->
+        <div id="scroll-liquid" class="absolute left-1/2 -translate-x-1/2 w-[200%] h-[200%] rounded-[40%] bg-brand-light/30 dark:bg-brand-dark/30 animate-spin-slow transition-all duration-100 ease-linear" style="top: 115%;"></div>
+        <!-- Icon -->
+        <i class="fas fa-arrow-up relative z-10 text-brand-light dark:text-brand-dark"></i>
+    </button>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // DOM Elements
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const scrollTopBtn = document.getElementById('scroll-top');
+        const scrollLiquid = document.getElementById('scroll-liquid');
+        const html = document.documentElement;
+
+        // --- Typewriter Effect ---
+        function typeWriter() {
+            const text = "I am a Software Engineer & Researcher";
+            const element = document.getElementById('typewriter');
+            if (!element) return;
+            
+            let i = 0;
+            element.textContent = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 70);
+                }
+            }
+            type();
+        }
+        // Start typewriter on page load
+        window.addEventListener('load', typeWriter);
+
+        // --- Scroll Reveal Logic ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+
+
+        // --- Theme & UI Logic ---
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        function initTheme() {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            // Show/Hide Button
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('translate-y-24', 'opacity-0');
+            } else {
+                scrollTopBtn.classList.add('translate-y-24', 'opacity-0');
+            }
+
+            // Calculate Liquid Height
+            // We control 'top' from 115% (empty) to -15% (full)
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight);
+            
+            // Map 0 -> 1 to 115 -> -15
+            // Formula: 115 - (scrollPercent * 130)
+            const topValue = 115 - (scrollPercent * 130);
+            
+            if (scrollLiquid) {
+                scrollLiquid.style.top = `${topValue}%`;
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        initTheme();
+
+    </script>
+</body>
+</html>
