@@ -41,6 +41,8 @@
                         'bounce-slow': 'bounce 3s infinite',
                         'blob': 'blob 7s infinite',
                         'spin-slow': 'spin 5s linear infinite',
+                        'orbit': 'orbit 20s linear infinite',
+                        'counter-orbit': 'counter-orbit 20s linear infinite',
                     },
                     keyframes: {
                         blob: {
@@ -48,6 +50,14 @@
                             '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        orbit: {
+                            '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+                            '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+                        },
+                        'counter-orbit': {
+                            '0%': { transform: 'rotate(0deg)' },
+                            '100%': { transform: 'rotate(-360deg)' },
                         }
                     }
                 }
@@ -520,46 +530,46 @@
             </div>
 
             <!-- Right Side: Photo Frame - Hexagonal Design -->
-            <div class="order-1 md:order-2 flex justify-center relative reveal">
+            <div class="order-1 md:order-2 flex justify-center items-center relative reveal" style="min-height: 500px;">
                 <!-- Animated Orbiting Rings -->
-                <div class="absolute w-64 h-64 md:w-[450px] md:h-[450px]">
+                <div class="absolute w-72 h-72 md:w-[480px] md:h-[480px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div class="absolute inset-0 rounded-full border-2 border-dashed border-brand-light/30 dark:border-brand-dark/30 animate-spin-slow"></div>
                     <div class="absolute inset-4 rounded-full border border-cyan-400/20 animate-spin-slow" style="animation-direction: reverse; animation-duration: 8s;"></div>
                     <div class="absolute inset-8 rounded-full border border-purple-400/20 animate-spin-slow" style="animation-duration: 12s;"></div>
                 </div>
                 
-                <!-- Floating Tech Icons -->
-                <div class="absolute w-64 h-64 md:w-[450px] md:h-[450px] animate-spin-slow" style="animation-duration: 20s;">
+                <!-- Floating Tech Icons - Orbiting Container -->
+                <div class="absolute w-72 h-72 md:w-[480px] md:h-[480px] left-1/2 top-1/2 animate-orbit">
                     <!-- Top -->
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-react text-cyan-400 text-sm md:text-lg"></i>
                     </div>
                     <!-- Bottom -->
-                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-python text-blue-500 text-sm md:text-lg"></i>
                     </div>
                     <!-- Left -->
-                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-node-js text-green-500 text-sm md:text-lg"></i>
                     </div>
                     <!-- Right -->
-                    <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fas fa-cube text-indigo-500 text-sm md:text-lg"></i>
                     </div>
                     <!-- Top Left -->
-                    <div class="absolute top-[15%] left-[15%] -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute top-[15%] left-[15%] -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-js text-yellow-400 text-sm md:text-lg"></i>
                     </div>
                     <!-- Top Right -->
-                    <div class="absolute top-[15%] right-[15%] translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute top-[15%] right-[15%] translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-html5 text-orange-500 text-sm md:text-lg"></i>
                     </div>
                     <!-- Bottom Left -->
-                    <div class="absolute bottom-[15%] left-[15%] -translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute bottom-[15%] left-[15%] -translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-css3-alt text-blue-400 text-sm md:text-lg"></i>
                     </div>
                     <!-- Bottom Right -->
-                    <div class="absolute bottom-[15%] right-[15%] translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center">
+                    <div class="absolute bottom-[15%] right-[15%] translate-x-1/2 translate-y-1/2 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center animate-counter-orbit">
                         <i class="fab fa-git-alt text-red-500 text-sm md:text-lg"></i>
                     </div>
                 </div>
@@ -1100,5 +1110,4 @@
 
     </script>
 </body>
-
 </html>
